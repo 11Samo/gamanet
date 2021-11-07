@@ -66,15 +66,17 @@
                 <form action="" class="pt-2">
                   <div class="form-group mb-4 pb-2">
                     <input
-                      type="text"
+                      type="email"
                       class="form-control"
+                      id="email-input"
                       placeholder="Email or Customer Zone Account"
                     />
                   </div>
                   <div class="form-group mb-4 pb-2">
                     <input
-                      type="text"
+                      type="password"
                       class="form-control"
+                      id="pass-input"
                       placeholder="Password"
                     />
                   </div>
@@ -82,14 +84,22 @@
                     type="submit"
                     value="Login"
                     class="btn btn-primary btn-block text-white"
+                    onclick="onLogin()"
                   />
                 </form>
                 <div class="d-flex justify-content-between my-4 pt-3">
-                  <a class="text-blue" href="#">Create account</a>
-                  <a class="text-blue" href="#">Forgot password?</a>
+                  <a onclick="onCreatAccount()" class="text-blue" href="#"
+                    >Create account</a
+                  >
+                  <a onclick="onForgotPassword()" class="text-blue" href="#"
+                    >Forgot password?</a
+                  >
                 </div>
                 <p>Or</p>
-                <button class="btn btn-block btn-shadow login-options">
+                <button
+                  class="btn btn-block btn-shadow login-options"
+                  onclick="onGoogleLogin()"
+                >
                   <img src="images/Google Logo.png" alt="Google logo" />
                   Continue with Google
                 </button>
@@ -105,12 +115,14 @@
       <div class="container align-left pl-4">
         <div class="row pl-2">
           <div class="col py-3">
-            <img
-              class="d-inline"
-              src="images/C4 Portal Logo.png"
-              alt="Portal logo"
-              width="25"
-            />
+            <a href="#" onclick="onGamanetLogin()">
+              <img
+                class="d-inline"
+                src="images/C4 Portal Logo.png"
+                alt="Portal logo"
+                width="25"
+              />
+            </a>
             <p class="d-inline text-blue">
               &copy; 2009-<span id="year"></span> Gamanet a.s. All rights
               reserved
@@ -119,6 +131,8 @@
         </div>
       </div>
     </footer>
+
+    <div class="container" id="notification-modal"></div>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
@@ -162,5 +176,6 @@
         }
       });
     </script>
+    <script src="notificationHandler.js"></script>
   </body>
 </html>
