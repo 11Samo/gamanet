@@ -1,0 +1,61 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 100vh; }
+
+nav h3 {
+  font-weight: 800;
+  font-size: 1rem; }
+
+#main {
+  margin-top: 6rem; }
+  #main h1 {
+    font-weight: 600; }
+  #main .form-desc {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7); }
+  #main .form-title {
+    font-weight: 800;
+    font-size: 1.4rem; }
+  #main .card-body {
+    background-color: #fafafa; }
+
+.align-left {
+  margin-left: 0; }
+
+.main-title {
+  font-size: 2rem; }
+
+.info-header {
+  margin: auto;
+  border-bottom: 1px solid #ddd; }
+
+.b-radius {
+  border-radius: 0.45rem; }
+
+.btn-shadow {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); }
+
+.text-blue {
+  color: #3660cc; }
+
+.form-control::placeholder {
+  color: rgba(0, 0, 0, 0.5); }
+
+.portal-cloud {
+  margin-left: -95px; }
+
+#main-footer p {
+  font-size: 0.9rem; }
+
+@media only screen and (max-width: 992px) {
+  #main {
+    margin-top: 0; }
+    #main h1 {
+      text-align: center; }
+
+  .portal-cloud {
+    margin-left: 0; }
+
+  .login-form {
+    margin-bottom: 2rem; } }

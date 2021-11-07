@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="images/C4 Portal Logo.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>C4 Portal</title>
+  </head>
+  <body class="bg-secondary">
+    <nav class="navbar bg-light navbar-light">
+      <div class="container align-left">
+        <a href="#" class="navbar-brand">
+          <img src="images/C4 Portal Logo.png" alt="Portal logo" width="30" />
+          <h3 class="d-inline align-middle pl-1">Portal</h3>
+        </a>
+      </div>
+    </nav>
+
+    <!-- MAIN PART -->
+    <section class="py-5" id="main">
+      <div class="container h-100">
+        <div class="row">
+          <div class="col-lg-7 align-middle">
+            <h1 class="text-lg-left px-5 main-title mb-4">
+              Welcome to the C4 Partnership Program
+            </h1>
+            <img
+              src="images/C4 Portal Cloud.png"
+              alt="Portal cloud"
+              class="d-flex img-fluid portal-cloud"
+              width="670"
+              height="519"
+            />
+          </div>
+          <div class="col-lg-4 offset-lg-1 login-form">
+            <div class="card text-center card-form b-radius">
+              <div class="card-body b-radius">
+                <div class="info-header mb-4">
+                  <img src="images/C4 Portal Logo.png" alt="Portal logo" />
+                  <h3 class="d-inline align-middle form-title pl-1">Portal</h3>
+                  <p class="my-4 form-desc">
+                    Please enter your C4 Portal or Customer Zone User account
+                    email and password or use one of the options below
+                  </p>
+                </div>
+                <form action="" class="pt-2">
+                  <div class="form-group mb-4 pb-2">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Email or Customer Zone Account"
+                    />
+                  </div>
+                  <div class="form-group mb-4 pb-2">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <input
+                    type="submit"
+                    value="Login"
+                    class="btn btn-primary btn-block text-white"
+                  />
+                </form>
+                <div class="d-flex justify-content-between my-4 pt-3">
+                  <a class="text-blue" href="#">Create account</a>
+                  <a class="text-blue" href="#">Forgot password?</a>
+                </div>
+                <p>Or</p>
+                <button class="btn btn-block btn-shadow login-options">
+                  <img src="images/Google Logo.png" alt="Google logo" />
+                  Continue with Google
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="main-footer" class="bg-light fixed-bottom">
+      <div class="container align-left pl-4">
+        <div class="row pl-2">
+          <div class="col py-3">
+            <img
+              class="d-inline"
+              src="images/C4 Portal Logo.png"
+              alt="Portal logo"
+              width="25"
+            />
+            <p class="d-inline text-blue">
+              &copy; 2009-<span id="year"></span> Gamanet a.s. All rights
+              reserved
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+      integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      //Get current year for the copyright
+      $("#year").text(new Date().getFullYear());
+
+      //Init ScrollSpy
+      $("body").scrollspy({ target: "#main-nav" });
+
+      //Smooth Scrolling
+      $("#main-nav a").on("click", function (event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+
+          const hash = this.hash;
+
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800,
+            function () {
+              window.location.hash = hash;
+            }
+          );
+        }
+      });
+    </script>
+  </body>
+</html>
